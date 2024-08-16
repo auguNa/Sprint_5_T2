@@ -32,6 +32,28 @@ public class PetService {
         return petRepository.save(pet);
     }
 
+    // New method to handle actions
+    public Pet performAction(Long petId, String action) {
+        Pet pet = petRepository.findById(petId)
+                .orElseThrow(() -> new RuntimeException("Pet not found"));
+
+        switch (action.toLowerCase()) {
+            case "feed":
+                pet.feed();
+                break;
+            case "play":
+                pet.play();
+                break;
+            case "rest":
+                pet.rest();
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown action: " + action);
+        }
+
+        return petRepository.save(pet);
+    }
+
     public void deletePet(Long petId) {
         Pet pet = petRepository.findById(petId)
                 .orElseThrow(() -> new RuntimeException("Pet not found"));

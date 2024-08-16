@@ -2,6 +2,7 @@ package S5_T2.IT_ACADEMY.service;
 
 import S5_T2.IT_ACADEMY.entity.User;
 import S5_T2.IT_ACADEMY.repository.UserRepository;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,7 +13,9 @@ import java.util.ArrayList;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
-
+    @Getter
+    private Long id;
+    private String username;
     @Autowired
     private UserRepository userRepository;
 
