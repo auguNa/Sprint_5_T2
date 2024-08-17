@@ -6,6 +6,7 @@ import lombok.Setter;
 
 @Entity
 public class Pet {
+    @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

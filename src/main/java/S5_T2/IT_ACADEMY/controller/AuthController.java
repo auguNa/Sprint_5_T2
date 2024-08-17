@@ -1,9 +1,11 @@
 package S5_T2.IT_ACADEMY.controller;
 
 import S5_T2.IT_ACADEMY.service.AuthService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
