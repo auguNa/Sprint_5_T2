@@ -1,19 +1,22 @@
 package S5_T2.IT_ACADEMY.service;
 
+import S5_T2.IT_ACADEMY.controller.PetController;
 import S5_T2.IT_ACADEMY.entity.User;
 import S5_T2.IT_ACADEMY.entity.VirtualPet;
 import S5_T2.IT_ACADEMY.repository.VirtualPetRepository;
 import org.apache.velocity.exception.ResourceNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
-
+import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 
 @Service
 public class VirtualPetService {
-
+    private static final Logger logger = LoggerFactory.getLogger(VirtualPetService.class);
     @Autowired
     private VirtualPetRepository petRepository;
 
@@ -30,8 +33,22 @@ public class VirtualPetService {
     // Evict cache when a new pet is created
     @CacheEvict(value = "pets", key = "#pet.user.id", allEntries = true)
     public VirtualPet createPet(VirtualPet pet, User owner) {
+        if (owner == null) {
+            throw new IllegalArgumentException("Owner cannot be null");
+        }
+        if (pet == null) {
+            throw new IllegalArgumentException("Pet cannot be null");
+        }
         pet.setUser(owner);
-        return petRepository.save(pet);
+
+        try {
+            VirtualPet savedPet = petRepository.save(pet);
+            logger.info("Pet created successfully: {}", savedPet);
+            return savedPet;
+        } catch (Exception e) {
+            logger.error("Error creating pet: ", e);
+            throw new RuntimeException("Failed to create pet", e);
+        }
     }
 
     // Evict cache when a pet is updated

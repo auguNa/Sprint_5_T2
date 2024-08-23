@@ -1,6 +1,7 @@
 package S5_T2.IT_ACADEMY.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,25 +14,38 @@ public class VirtualPet {
 
     @Getter
     @Setter
+    @NotBlank(message = "Name is mandatory")
+    @Size(max = 50, message = "Name cannot exceed 50 characters")
     private String name;
 
     @Getter
     @Setter
+    @NotBlank(message = "Type is mandatory")
+    @Size(max = 30, message = "Type cannot exceed 30 characters")
     private String type;
 
     @Getter
     @Setter
+    @NotBlank(message = "Color is mandatory")
+    @Size(max = 20, message = "Color cannot exceed 20 characters")
     private String color;
 
+    @Setter
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
     @Getter
     @Setter
-    private int mood;
+    @Min(value = 0, message = "Mood cannot be less than 0")
+    @Max(value = 100, message = "Mood cannot exceed 100")
+    private int mood = 100;
+
     @Getter
     @Setter
-    private int energy;
+    @Min(value = 0, message = "Energy cannot be less than 0")
+    @Max(value = 100, message = "Energy cannot exceed 100")
+    private int energy = 100;
 
     public VirtualPet() {
         this.mood = 100; // Max mood
@@ -40,10 +54,6 @@ public class VirtualPet {
 
     public User getUser() {
         return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     // Methods to perform actions

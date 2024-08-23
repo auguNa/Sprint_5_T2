@@ -4,6 +4,7 @@ import S5_T2.IT_ACADEMY.entity.VirtualPet;
 import S5_T2.IT_ACADEMY.entity.User;
 import S5_T2.IT_ACADEMY.repository.UserRepository;
 import S5_T2.IT_ACADEMY.service.VirtualPetService;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +19,6 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/api/pets")
-
 
 public class PetController {
     private static final Logger logger = LoggerFactory.getLogger(PetController.class);
@@ -49,8 +49,9 @@ public class PetController {
         return pets;
     }
 
+    @PreAuthorize("hasRole('ROLE_USER')")
     @PostMapping("/create")
-    public VirtualPet createPet(@RequestBody VirtualPet pet, Authentication authentication) {
+    public VirtualPet createPet(@Valid @RequestBody VirtualPet pet, Authentication authentication) {
         // Get the username from the authentication object
         String username = authentication.getName();
         logger.info("Creating pet for user: {}", username);
@@ -63,13 +64,14 @@ public class PetController {
                 });
         // Set the fetched user to the pet
         pet.setUser(user);
-        VirtualPet createdPet = petService.createPet(pet, (User) authentication);
+        VirtualPet createdPet = petService.createPet(pet, user);
         logger.info("Pet created with ID: {} for user: {}", createdPet.getId(), username);
         return createdPet;
     }
 
     @Autowired
     private VirtualPetService virtualPetService;
+
     @PreAuthorize("hasRole('ROLE_USER') and @securityService.hasAccessToPet(authentication, #id)")
     @GetMapping("/pets/{id}")
     public VirtualPet getPet(@PathVariable Long id) {
