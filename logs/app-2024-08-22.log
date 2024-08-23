@@ -328,7 +328,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 	Validation Mode: AUTO
 	Jar files URLs []
 	Managed classes names [
-		S5_T2.IT_ACADEMY.entity.Pet
+		S5_T2.IT_ACADEMY.entity.VirtualPet
 		S5_T2.IT_ACADEMY.entity.Role
 		S5_T2.IT_ACADEMY.entity.User]
 	Mapping files names []
@@ -601,10 +601,10 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-17 12:25:04 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1491746776, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-17 12:25:04 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
 2024-08-17 12:25:04 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3afcb53e
-2024-08-17 12:25:04 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Binding entity from annotated class: S5_T2.IT_ACADEMY.entity.Pet
+2024-08-17 12:25:04 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Binding entity from annotated class: S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Import with entity name Pet
 2024-08-17 12:25:04 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
-2024-08-17 12:25:04 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Bind entity S5_T2.IT_ACADEMY.entity.Pet on table pet
+2024-08-17 12:25:04 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Bind entity S5_T2.IT_ACADEMY.entity.VirtualPet on table pet
 2024-08-17 12:25:04 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1940879790, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-17 12:25:04 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1491746776, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-17 12:25:04 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
@@ -616,10 +616,10 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-17 12:25:04 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
 2024-08-17 12:25:04 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b5af9e3
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
-2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Pet] is safe
-2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Pet
+2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.VirtualPet] is safe
+2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property id with lazy=false
-2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:id]
+2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:id]
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for id
 2024-08-17 12:25:04 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.id
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property id
@@ -627,31 +627,31 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.boot.model.internal.BinderHelper - #makeIdGenerator(BasicValue([Column(id)]), id, identity, , ...)
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property color with lazy=false
-2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:color]
+2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:color]
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for color
 2024-08-17 12:25:04 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.color
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property color
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property energy with lazy=false
-2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:energy]
+2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:energy]
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for energy
 2024-08-17 12:25:04 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.energy
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property energy
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property mood with lazy=false
-2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:mood]
+2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:mood]
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for mood
 2024-08-17 12:25:04 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.mood
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property mood
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property name with lazy=false
-2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:name]
+2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:name]
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for name
 2024-08-17 12:25:04 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.name
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property name
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property type with lazy=false
-2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:type]
+2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:type]
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for type
 2024-08-17 12:25:04 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.type
 2024-08-17 12:25:04 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property type
@@ -1082,12 +1082,12 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-17 12:25:04 [restartedMain] DEBUG org.hibernate.orm.query.plan.cache - Starting QueryInterpretationCache(2048)
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.s.i.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.e.i.EntityCopyObserverFactoryInitiator - Configured EntityCopyObserver strategy: disallow
-2024-08-17 12:25:05 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
-2024-08-17 12:25:05 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
-2024-08-17 12:25:05 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Pet] is safe
-2024-08-17 12:25:05 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Pet
-2024-08-17 12:25:05 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.Pet]: private accessor [color]
-2024-08-17 12:25:05 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-17 12:25:05 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-17 12:25:05 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-17 12:25:05 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.VirtualPet] is safe
+2024-08-17 12:25:05 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.VirtualPet
+2024-08-17 12:25:05 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.VirtualPet]: private accessor [color]
+2024-08-17 12:25:05 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Role] is safe
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Role
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.Role]: private accessor [name]
@@ -1096,43 +1096,43 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.User]: private accessor [password]
 2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.jdbc.mutation - Skipping collection row updates - S5_T2.IT_ACADEMY.entity.User.roles
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting post-init callbacks
-2024-08-17 12:25:05 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : To-one key - NavigableRole[S5_T2.IT_ACADEMY.entity.Pet.user]
-2024-08-17 12:25:05 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.Pet) `staticFetchableList` generator
+2024-08-17 12:25:05 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : To-one key - NavigableRole[S5_T2.IT_ACADEMY.entity.VirtualPet.user]
+2024-08-17 12:25:05 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.VirtualPet) `staticFetchableList` generator
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.Role) `staticFetchableList` generator
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[S5_T2.IT_ACADEMY.entity.User.roles#{element}]) - element descriptor
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping(S5_T2.IT_ACADEMY.entity.User.roles)#finishInitialization
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping(S5_T2.IT_ACADEMY.entity.User.roles) - key descriptor
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.User) `staticFetchableList` generator
 2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : p1_0
-2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(S5_T2.IT_ACADEMY.entity.Pet)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet] 
-2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@73d7d618] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user] 
+2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(S5_T2.IT_ACADEMY.entity.VirtualPet)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet]
+2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@73d7d618] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user]
 2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : u1_0
 2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : r1_0
-2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [CollectionTableGroup(S5_T2.IT_ACADEMY.entity.Pet.user.roles)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user.roles] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user.roles] 
-2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@5f7dae23] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}] 
+2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [CollectionTableGroup(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles]
+2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@5f7dae23] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}]
 2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : r1_1
 2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
- \-EntityResultImpl [S5_T2.IT_ACADEMY.entity.Pet]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.color]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.energy]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.mood]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.name]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.type]
- |  \-EntityFetchJoinedImpl [S5_T2.IT_ACADEMY.entity.Pet.user]
+ \-EntityResultImpl [S5_T2.IT_ACADEMY.entity.VirtualPet]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.color]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.energy]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.mood]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.name]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.type]
+ |  \-EntityFetchJoinedImpl [S5_T2.IT_ACADEMY.entity.VirtualPet.user]
 
 2024-08-17 12:25:05 [restartedMain] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
     SelectStatement {
       FromClause {
-        StandardTableGroup (p1 : S5_T2.IT_ACADEMY.entity.Pet) {
+        StandardTableGroup (p1 : S5_T2.IT_ACADEMY.entity.VirtualPet) {
           primaryTableReference : pet as p1_0
           TableGroupJoins {
-            left  join LazyTableGroup (u1 : S5_T2.IT_ACADEMY.entity.Pet.user) {
+            left  join LazyTableGroup (u1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user) {
               primaryTableReference : users as u1_0
               TableGroupJoins {
-                left  join CollectionTableGroup (r1 : S5_T2.IT_ACADEMY.entity.Pet.user.roles) {
+                left  join CollectionTableGroup (r1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles) {
                   primaryTableReference : user_roles as r1_0
                   TableGroupJoins {
-                    left  join LazyTableGroup (r1 : S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}) {
+                    left  join LazyTableGroup (r1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}) {
                       primaryTableReference : role as r1_1
                     }
                   }
@@ -1144,7 +1144,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
       }
     }
 
-2024-08-17 12:25:05 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: S5_T2.IT_ACADEMY.entity.Pet
+2024-08-17 12:25:05 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select id from pet where id=?
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Insert (0): insert into pet (color,energy,mood,name,type,user_id) values (?,?,?,?,?,?)
 2024-08-17 12:25:05 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Update (0): update pet set color=?,energy=?,mood=?,name=?,type=?,user_id=? where id=?
@@ -2916,7 +2916,7 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'testuser' fo
 2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG org.hibernate.orm.results - Initializer list is empty
 2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.basic.BasicResultAssembler@750cae60
 2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [5]
-2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG o.h.id.IdentifierGeneratorHelper - Extracted generated values [S5_T2.IT_ACADEMY.entity.Pet]: [Ljava.lang.Object;@5fc54187
+2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG o.h.id.IdentifierGeneratorHelper - Extracted generated values [S5_T2.IT_ACADEMY.entity.VirtualPet]: [Ljava.lang.Object;@5fc54187
 2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG o.h.e.t.internal.TransactionImpl - committing
 2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
 2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
@@ -2926,7 +2926,7 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'testuser' fo
 2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
 2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.Role{name=ROLE_USER, id=7}
 2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.User{password=$2a$10$Kj75qTaVfQIF1rtg3G1nW.DJyq5HhGsrWuWtPxqjrCiTE.CPjMSIO, roles=[S5_T2.IT_ACADEMY.entity.Role#7], id=10, username=testuser6}
-2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.Pet{color=White, mood=100, name=Tom, id=5, type=Horse, user=S5_T2.IT_ACADEMY.entity.User#10, energy=100}
+2024-08-17 12:30:32 [http-nio-8080-exec-2] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.VirtualPet{color=White, mood=100, name=Tom, id=5, type=Horse, user=S5_T2.IT_ACADEMY.entity.User#10, energy=100}
 2024-08-17 12:30:32 [http-nio-8080-exec-2] INFO  S.I.controller.PetController - Pet created with ID: 5 for user: testuser6
 2024-08-17 12:30:34 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
 2024-08-17 12:30:34 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
@@ -3019,18 +3019,18 @@ java.io.EOFException: null
 2024-08-17 12:32:00 [http-nio-8080-exec-4] DEBUG o.h.e.t.internal.TransactionImpl - begin
 2024-08-17 12:32:00 [http-nio-8080-exec-4] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
 2024-08-17 12:32:00 [http-nio-8080-exec-4] DEBUG org.hibernate.orm.results - Initializer list:
-	  S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element} -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element})@1045606573 (EntityCollectionPart(S5_T2.IT_ACADEMY.entity.User.roles#{element})@2140868365)
-	  S5_T2.IT_ACADEMY.entity.Pet -> EntityResultInitializer(S5_T2.IT_ACADEMY.entity.Pet)@1879220602 (SingleTableEntityPersister(S5_T2.IT_ACADEMY.entity.Pet))
-	  S5_T2.IT_ACADEMY.entity.Pet.user.roles -> SetInitializer(S5_T2.IT_ACADEMY.entity.Pet.user.roles)@1975270444 (PluralAttribute(S5_T2.IT_ACADEMY.entity.User.roles))
-	  S5_T2.IT_ACADEMY.entity.Pet.user -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.Pet.user)@273332684 (ToOneAttributeMapping(NavigableRole[S5_T2.IT_ACADEMY.entity.Pet.user])@1001825456)
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element} -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element})@1045606573 (EntityCollectionPart(S5_T2.IT_ACADEMY.entity.User.roles#{element})@2140868365)
+	  S5_T2.IT_ACADEMY.entity.VirtualPet -> EntityResultInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet)@1879220602 (SingleTableEntityPersister(S5_T2.IT_ACADEMY.entity.VirtualPet))
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles -> SetInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles)@1975270444 (PluralAttribute(S5_T2.IT_ACADEMY.entity.User.roles))
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user)@273332684 (ToOneAttributeMapping(NavigableRole[S5_T2.IT_ACADEMY.entity.VirtualPet.user])@1001825456)
 
 2024-08-17 12:32:00 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.color,p1_0.energy,p1_0.mood,p1_0.name,p1_0.type,u1_0.id,u1_0.password,r1_0.user_id,r1_1.id,r1_1.name,u1_0.username from pet p1_0 left join users u1_0 on u1_0.id=p1_0.user_id left join user_roles r1_0 on u1_0.id=r1_0.user_id left join role r1_1 on r1_1.id=r1_0.role_id where p1_0.id=?
 2024-08-17 12:32:00 [http-nio-8080-exec-4] DEBUG o.h.e.t.internal.TransactionImpl - committing
 2024-08-17 12:32:00 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Pet not found] with root cause
 java.lang.RuntimeException: Pet not found
-	at S5_T2.IT_ACADEMY.service.PetService.lambda$performAction$1(PetService.java:38)
+	at S5_T2.IT_ACADEMY.service.VirtualPetService.lambda$performAction$1(PetService.java:38)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at S5_T2.IT_ACADEMY.service.PetService.performAction(PetService.java:38)
+	at S5_T2.IT_ACADEMY.service.VirtualPetService.performAction(PetService.java:38)
 	at S5_T2.IT_ACADEMY.controller.PetController.feedPet(PetController.java:79)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -3189,36 +3189,36 @@ java.lang.RuntimeException: Pet not found
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.e.t.internal.TransactionImpl - begin
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Initializer list:
-	  S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element} -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element})@247567749 (EntityCollectionPart(S5_T2.IT_ACADEMY.entity.User.roles#{element})@2140868365)
-	  S5_T2.IT_ACADEMY.entity.Pet -> EntityResultInitializer(S5_T2.IT_ACADEMY.entity.Pet)@1405845762 (SingleTableEntityPersister(S5_T2.IT_ACADEMY.entity.Pet))
-	  S5_T2.IT_ACADEMY.entity.Pet.user.roles -> SetInitializer(S5_T2.IT_ACADEMY.entity.Pet.user.roles)@448639078 (PluralAttribute(S5_T2.IT_ACADEMY.entity.User.roles))
-	  S5_T2.IT_ACADEMY.entity.Pet.user -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.Pet.user)@398430781 (ToOneAttributeMapping(NavigableRole[S5_T2.IT_ACADEMY.entity.Pet.user])@1001825456)
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element} -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element})@247567749 (EntityCollectionPart(S5_T2.IT_ACADEMY.entity.User.roles#{element})@2140868365)
+	  S5_T2.IT_ACADEMY.entity.VirtualPet -> EntityResultInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet)@1405845762 (SingleTableEntityPersister(S5_T2.IT_ACADEMY.entity.VirtualPet))
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles -> SetInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles)@448639078 (PluralAttribute(S5_T2.IT_ACADEMY.entity.User.roles))
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user)@398430781 (ToOneAttributeMapping(NavigableRole[S5_T2.IT_ACADEMY.entity.VirtualPet.user])@1001825456)
 
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.color,p1_0.energy,p1_0.mood,p1_0.name,p1_0.type,u1_0.id,u1_0.password,r1_0.user_id,r1_1.id,r1_1.name,u1_0.username from pet p1_0 left join users u1_0 on u1_0.id=p1_0.user_id left join user_roles r1_0 on u1_0.id=r1_0.user_id left join role r1_1 on r1_1.id=r1_0.role_id where p1_0.id=?
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.Pet): 5
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.VirtualPet): 5
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Extracted JDBC value [6] - [10]
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.Pet.user): 10
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Current row collection key : S5_T2.IT_ACADEMY.entity.Pet.user.roles#10
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.VirtualPet.user): 10
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Current row collection key : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles#10
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Extracted JDBC value [8] - [10]
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Extracted JDBC value [9] - [7]
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}): 7
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}#7] : 1842720126
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.Pet.user#10] : 101770371
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.Pet#5] : 290480995
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Created new collection wrapper [S5_T2.IT_ACADEMY.entity.Pet.user.roles#10] : org.hibernate.collection.spi.PersistentSet@1806738394
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Responsible for loading collection [S5_T2.IT_ACADEMY.entity.Pet.user.roles#10] : org.hibernate.collection.spi.PersistentSet@1806738394
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}): 7
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}#7] : 1842720126
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.VirtualPet.user#10] : 101770371
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.VirtualPet#5] : 290480995
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Created new collection wrapper [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles#10] : org.hibernate.collection.spi.PersistentSet@1806738394
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Responsible for loading collection [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles#10] : org.hibernate.collection.spi.PersistentSet@1806738394
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Extracted JDBC value [10] - [ROLE_USER]
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}#7
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Reading element from row for collection [S5_T2.IT_ACADEMY.entity.Pet.user.roles#10] -> org.hibernate.collection.spi.PersistentSet@1806738394
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}#7
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Reading element from row for collection [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles#10] -> org.hibernate.collection.spi.PersistentSet@1806738394
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Extracted JDBC value [7] - [$2a$10$Kj75qTaVfQIF1rtg3G1nW.DJyq5HhGsrWuWtPxqjrCiTE.CPjMSIO]
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Extracted JDBC value [11] - [testuser6]
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.Pet.user#10
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.VirtualPet.user#10
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [White]
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [100]
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [100]
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [Tom]
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Horse]
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.Pet#5
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.VirtualPet#5
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@2afb8099
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.s.results.internal.ResultsHelper - Collection fully initialized: [S5_T2.IT_ACADEMY.entity.User.roles#10]
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.e.t.internal.TransactionImpl - committing
@@ -3233,7 +3233,7 @@ java.lang.RuntimeException: Pet not found
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.Role{name=ROLE_USER, id=7}
 2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.User{password=$2a$10$Kj75qTaVfQIF1rtg3G1nW.DJyq5HhGsrWuWtPxqjrCiTE.CPjMSIO, roles=[S5_T2.IT_ACADEMY.entity.Role#7], id=10, username=testuser6}
-2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.Pet{color=White, mood=100, name=Tom, id=5, type=Horse, user=S5_T2.IT_ACADEMY.entity.User#10, energy=100}
+2024-08-17 12:32:09 [http-nio-8080-exec-6] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.VirtualPet{color=White, mood=100, name=Tom, id=5, type=Horse, user=S5_T2.IT_ACADEMY.entity.User#10, energy=100}
 2024-08-17 12:32:09 [http-nio-8080-exec-6] INFO  S.I.controller.PetController - Pet fed with ID: 5
 2024-08-17 12:32:26 [http-nio-8080-exec-5] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : u1_0
 2024-08-17 12:32:26 [http-nio-8080-exec-5] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(S5_T2.IT_ACADEMY.entity.User(56041595003700))] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.User] for NavigablePath [S5_T2.IT_ACADEMY.entity.User] 
@@ -3290,18 +3290,18 @@ java.lang.RuntimeException: Pet not found
 2024-08-17 12:32:26 [http-nio-8080-exec-5] DEBUG o.h.e.t.internal.TransactionImpl - begin
 2024-08-17 12:32:26 [http-nio-8080-exec-5] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
 2024-08-17 12:32:26 [http-nio-8080-exec-5] DEBUG org.hibernate.orm.results - Initializer list:
-	  S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element} -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element})@1456131525 (EntityCollectionPart(S5_T2.IT_ACADEMY.entity.User.roles#{element})@2140868365)
-	  S5_T2.IT_ACADEMY.entity.Pet -> EntityResultInitializer(S5_T2.IT_ACADEMY.entity.Pet)@254111190 (SingleTableEntityPersister(S5_T2.IT_ACADEMY.entity.Pet))
-	  S5_T2.IT_ACADEMY.entity.Pet.user.roles -> SetInitializer(S5_T2.IT_ACADEMY.entity.Pet.user.roles)@2046439391 (PluralAttribute(S5_T2.IT_ACADEMY.entity.User.roles))
-	  S5_T2.IT_ACADEMY.entity.Pet.user -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.Pet.user)@15978294 (ToOneAttributeMapping(NavigableRole[S5_T2.IT_ACADEMY.entity.Pet.user])@1001825456)
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element} -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element})@1456131525 (EntityCollectionPart(S5_T2.IT_ACADEMY.entity.User.roles#{element})@2140868365)
+	  S5_T2.IT_ACADEMY.entity.VirtualPet -> EntityResultInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet)@254111190 (SingleTableEntityPersister(S5_T2.IT_ACADEMY.entity.VirtualPet))
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles -> SetInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles)@2046439391 (PluralAttribute(S5_T2.IT_ACADEMY.entity.User.roles))
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user)@15978294 (ToOneAttributeMapping(NavigableRole[S5_T2.IT_ACADEMY.entity.VirtualPet.user])@1001825456)
 
 2024-08-17 12:32:26 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.color,p1_0.energy,p1_0.mood,p1_0.name,p1_0.type,u1_0.id,u1_0.password,r1_0.user_id,r1_1.id,r1_1.name,u1_0.username from pet p1_0 left join users u1_0 on u1_0.id=p1_0.user_id left join user_roles r1_0 on u1_0.id=r1_0.user_id left join role r1_1 on r1_1.id=r1_0.role_id where p1_0.id=?
 2024-08-17 12:32:26 [http-nio-8080-exec-5] DEBUG o.h.e.t.internal.TransactionImpl - committing
 2024-08-17 12:32:26 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Pet not found] with root cause
 java.lang.RuntimeException: Pet not found
-	at S5_T2.IT_ACADEMY.service.PetService.lambda$performAction$1(PetService.java:38)
+	at S5_T2.IT_ACADEMY.service.VirtualPetService.lambda$performAction$1(PetService.java:38)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at S5_T2.IT_ACADEMY.service.PetService.performAction(PetService.java:38)
+	at S5_T2.IT_ACADEMY.service.VirtualPetService.performAction(PetService.java:38)
 	at S5_T2.IT_ACADEMY.controller.PetController.playWithPet(PetController.java:87)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -3460,36 +3460,36 @@ java.lang.RuntimeException: Pet not found
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.e.t.internal.TransactionImpl - begin
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Initializer list:
-	  S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element} -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element})@1121991790 (EntityCollectionPart(S5_T2.IT_ACADEMY.entity.User.roles#{element})@2140868365)
-	  S5_T2.IT_ACADEMY.entity.Pet -> EntityResultInitializer(S5_T2.IT_ACADEMY.entity.Pet)@1150485661 (SingleTableEntityPersister(S5_T2.IT_ACADEMY.entity.Pet))
-	  S5_T2.IT_ACADEMY.entity.Pet.user.roles -> SetInitializer(S5_T2.IT_ACADEMY.entity.Pet.user.roles)@594539263 (PluralAttribute(S5_T2.IT_ACADEMY.entity.User.roles))
-	  S5_T2.IT_ACADEMY.entity.Pet.user -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.Pet.user)@1236802789 (ToOneAttributeMapping(NavigableRole[S5_T2.IT_ACADEMY.entity.Pet.user])@1001825456)
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element} -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element})@1121991790 (EntityCollectionPart(S5_T2.IT_ACADEMY.entity.User.roles#{element})@2140868365)
+	  S5_T2.IT_ACADEMY.entity.VirtualPet -> EntityResultInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet)@1150485661 (SingleTableEntityPersister(S5_T2.IT_ACADEMY.entity.VirtualPet))
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles -> SetInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles)@594539263 (PluralAttribute(S5_T2.IT_ACADEMY.entity.User.roles))
+	  S5_T2.IT_ACADEMY.entity.VirtualPet.user -> EntityJoinedFetchInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet.user)@1236802789 (ToOneAttributeMapping(NavigableRole[S5_T2.IT_ACADEMY.entity.VirtualPet.user])@1001825456)
 
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.color,p1_0.energy,p1_0.mood,p1_0.name,p1_0.type,u1_0.id,u1_0.password,r1_0.user_id,r1_1.id,r1_1.name,u1_0.username from pet p1_0 left join users u1_0 on u1_0.id=p1_0.user_id left join user_roles r1_0 on u1_0.id=r1_0.user_id left join role r1_1 on r1_1.id=r1_0.role_id where p1_0.id=?
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.Pet): 5
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.VirtualPet): 5
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Extracted JDBC value [6] - [10]
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.Pet.user): 10
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Current row collection key : S5_T2.IT_ACADEMY.entity.Pet.user.roles#10
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.VirtualPet.user): 10
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Current row collection key : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles#10
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Extracted JDBC value [8] - [10]
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Extracted JDBC value [9] - [7]
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}): 7
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}#7] : 179828985
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.Pet.user#10] : 65110654
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.Pet#5] : 1258714936
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Created new collection wrapper [S5_T2.IT_ACADEMY.entity.Pet.user.roles#10] : org.hibernate.collection.spi.PersistentSet@98405366
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Responsible for loading collection [S5_T2.IT_ACADEMY.entity.Pet.user.roles#10] : org.hibernate.collection.spi.PersistentSet@98405366
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}): 7
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}#7] : 179828985
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.VirtualPet.user#10] : 65110654
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.VirtualPet#5] : 1258714936
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Created new collection wrapper [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles#10] : org.hibernate.collection.spi.PersistentSet@98405366
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Responsible for loading collection [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles#10] : org.hibernate.collection.spi.PersistentSet@98405366
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Extracted JDBC value [10] - [ROLE_USER]
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}#7
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Reading element from row for collection [S5_T2.IT_ACADEMY.entity.Pet.user.roles#10] -> org.hibernate.collection.spi.PersistentSet@98405366
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}#7
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) Reading element from row for collection [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles#10] -> org.hibernate.collection.spi.PersistentSet@98405366
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Extracted JDBC value [7] - [$2a$10$Kj75qTaVfQIF1rtg3G1nW.DJyq5HhGsrWuWtPxqjrCiTE.CPjMSIO]
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Extracted JDBC value [11] - [testuser6]
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.Pet.user#10
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.VirtualPet.user#10
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [White]
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [100]
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [100]
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [Tom]
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Horse]
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.Pet#5
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.VirtualPet#5
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@3098cb84
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.s.results.internal.ResultsHelper - Collection fully initialized: [S5_T2.IT_ACADEMY.entity.User.roles#10]
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.e.t.internal.TransactionImpl - committing
@@ -3504,7 +3504,7 @@ java.lang.RuntimeException: Pet not found
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.Role{name=ROLE_USER, id=7}
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.User{password=$2a$10$Kj75qTaVfQIF1rtg3G1nW.DJyq5HhGsrWuWtPxqjrCiTE.CPjMSIO, roles=[S5_T2.IT_ACADEMY.entity.Role#7], id=10, username=testuser6}
-2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.Pet{color=White, mood=100, name=Tom, id=5, type=Horse, user=S5_T2.IT_ACADEMY.entity.User#10, energy=90}
+2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG o.h.internal.util.EntityPrinter - S5_T2.IT_ACADEMY.entity.VirtualPet{color=White, mood=100, name=Tom, id=5, type=Horse, user=S5_T2.IT_ACADEMY.entity.User#10, energy=90}
 2024-08-17 12:32:54 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - update pet set color=?,energy=?,mood=?,name=?,type=?,user_id=? where id=?
 2024-08-17 12:32:54 [http-nio-8080-exec-7] INFO  S.I.controller.PetController - Pet played with ID: 5
 2024-08-17 12:33:04 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
@@ -4131,7 +4131,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 	Validation Mode: AUTO
 	Jar files URLs []
 	Managed classes names [
-		S5_T2.IT_ACADEMY.entity.Pet
+		S5_T2.IT_ACADEMY.entity.VirtualPet
 		S5_T2.IT_ACADEMY.entity.Role
 		S5_T2.IT_ACADEMY.entity.User]
 	Mapping files names []
@@ -4399,14 +4399,14 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1491746776, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f64d5cb
-2024-08-17 13:34:29 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Binding entity from annotated class: S5_T2.IT_ACADEMY.entity.Pet
+2024-08-17 13:34:29 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Binding entity from annotated class: S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1940879790, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1491746776, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
 2024-08-17 13:34:29 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Import with entity name Pet
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@790e32e
-2024-08-17 13:34:29 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Bind entity S5_T2.IT_ACADEMY.entity.Pet on table pet
+2024-08-17 13:34:29 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Bind entity S5_T2.IT_ACADEMY.entity.VirtualPet on table pet
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
 2024-08-17 13:34:29 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedDiscriminatorColumn(column='DTYPE')
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1940879790, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
@@ -4414,14 +4414,14 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b3cd70d
 2024-08-17 13:34:29 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
-2024-08-17 13:34:29 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Pet] is safe
-2024-08-17 13:34:29 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Pet
+2024-08-17 13:34:29 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.VirtualPet] is safe
+2024-08-17 13:34:29 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-17 13:34:29 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property id with lazy=false
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=7, active=0, idle=7, waiting=0)
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1940879790, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1491746776, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
-2024-08-17 13:34:29 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:id]
+2024-08-17 13:34:29 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:id]
 2024-08-17 13:34:29 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@91c1284
 2024-08-17 13:34:29 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for id
 2024-08-17 13:34:29 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.id
@@ -4429,31 +4429,31 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.boot.model.internal.BinderHelper - #makeIdGenerator(BasicValue([Column(id)]), id, identity, , ...)
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property color with lazy=false
-2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:color]
+2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:color]
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for color
 2024-08-17 13:34:30 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.color
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property color
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property energy with lazy=false
-2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:energy]
+2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:energy]
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for energy
 2024-08-17 13:34:30 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.energy
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property energy
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property mood with lazy=false
-2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:mood]
+2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:mood]
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for mood
 2024-08-17 13:34:30 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.mood
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property mood
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property name with lazy=false
-2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:name]
+2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:name]
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for name
 2024-08-17 13:34:30 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.name
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property name
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property type with lazy=false
-2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:type]
+2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:type]
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for type
 2024-08-17 13:34:30 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.type
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property type
@@ -4885,12 +4885,12 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-17 13:34:30 [restartedMain] DEBUG org.hibernate.orm.query.plan.cache - Starting QueryInterpretationCache(2048)
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.s.i.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.e.i.EntityCopyObserverFactoryInitiator - Configured EntityCopyObserver strategy: disallow
-2024-08-17 13:34:30 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
-2024-08-17 13:34:30 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
-2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Pet] is safe
-2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Pet
-2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.Pet]: private accessor [color]
-2024-08-17 13:34:30 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-17 13:34:30 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-17 13:34:30 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.VirtualPet] is safe
+2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.VirtualPet
+2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.VirtualPet]: private accessor [color]
+2024-08-17 13:34:30 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Role] is safe
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Role
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.Role]: private accessor [name]
@@ -4899,43 +4899,43 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.User]: private accessor [password]
 2024-08-17 13:34:30 [restartedMain] DEBUG org.hibernate.orm.jdbc.mutation - Skipping collection row updates - S5_T2.IT_ACADEMY.entity.User.roles
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting post-init callbacks
-2024-08-17 13:34:30 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : To-one key - NavigableRole[S5_T2.IT_ACADEMY.entity.Pet.user]
-2024-08-17 13:34:30 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.Pet) `staticFetchableList` generator
+2024-08-17 13:34:30 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : To-one key - NavigableRole[S5_T2.IT_ACADEMY.entity.VirtualPet.user]
+2024-08-17 13:34:30 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.VirtualPet) `staticFetchableList` generator
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.Role) `staticFetchableList` generator
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[S5_T2.IT_ACADEMY.entity.User.roles#{element}]) - element descriptor
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping(S5_T2.IT_ACADEMY.entity.User.roles)#finishInitialization
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping(S5_T2.IT_ACADEMY.entity.User.roles) - key descriptor
 2024-08-17 13:34:30 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.User) `staticFetchableList` generator
 2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : p1_0
-2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(S5_T2.IT_ACADEMY.entity.Pet)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet] 
-2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@3a321ebf] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user] 
+2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(S5_T2.IT_ACADEMY.entity.VirtualPet)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet]
+2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@3a321ebf] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user]
 2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : u1_0
 2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : r1_0
-2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [CollectionTableGroup(S5_T2.IT_ACADEMY.entity.Pet.user.roles)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user.roles] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user.roles] 
-2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@2a392227] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}] 
+2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [CollectionTableGroup(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles]
+2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@2a392227] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}]
 2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : r1_1
 2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
- \-EntityResultImpl [S5_T2.IT_ACADEMY.entity.Pet]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.color]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.energy]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.mood]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.name]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.type]
- |  \-EntityFetchJoinedImpl [S5_T2.IT_ACADEMY.entity.Pet.user]
+ \-EntityResultImpl [S5_T2.IT_ACADEMY.entity.VirtualPet]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.color]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.energy]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.mood]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.name]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.type]
+ |  \-EntityFetchJoinedImpl [S5_T2.IT_ACADEMY.entity.VirtualPet.user]
 
 2024-08-17 13:34:31 [restartedMain] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
     SelectStatement {
       FromClause {
-        StandardTableGroup (p1 : S5_T2.IT_ACADEMY.entity.Pet) {
+        StandardTableGroup (p1 : S5_T2.IT_ACADEMY.entity.VirtualPet) {
           primaryTableReference : pet as p1_0
           TableGroupJoins {
-            left  join LazyTableGroup (u1 : S5_T2.IT_ACADEMY.entity.Pet.user) {
+            left  join LazyTableGroup (u1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user) {
               primaryTableReference : users as u1_0
               TableGroupJoins {
-                left  join CollectionTableGroup (r1 : S5_T2.IT_ACADEMY.entity.Pet.user.roles) {
+                left  join CollectionTableGroup (r1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles) {
                   primaryTableReference : user_roles as r1_0
                   TableGroupJoins {
-                    left  join LazyTableGroup (r1 : S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}) {
+                    left  join LazyTableGroup (r1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}) {
                       primaryTableReference : role as r1_1
                     }
                   }
@@ -4947,7 +4947,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
       }
     }
 
-2024-08-17 13:34:31 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: S5_T2.IT_ACADEMY.entity.Pet
+2024-08-17 13:34:31 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-17 13:34:31 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select id from pet where id=?
 2024-08-17 13:34:31 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Insert (0): insert into pet (color,energy,mood,name,type,user_id) values (?,?,?,?,?,?)
 2024-08-17 13:34:31 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Update (0): update pet set color=?,energy=?,mood=?,name=?,type=?,user_id=? where id=?
@@ -5823,28 +5823,28 @@ io.jsonwebtoken.security.SignatureException: JWT signature does not match locall
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.collection.internal.CollectionAssembler@2fbbd26f
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.s.results.internal.ResultsHelper - Collection fully initialized: [S5_T2.IT_ACADEMY.entity.User.roles#10]
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG S.I.controller.PetController - User found: S5_T2.IT_ACADEMY.entity.User@423e6966
-2024-08-17 13:37:09 [http-nio-8080-exec-9] INFO  S5_T2.IT_ACADEMY.service.PetService - Fetching all pets for user ID: 10
+2024-08-17 13:37:09 [http-nio-8080-exec-9] INFO  S5_T2.IT_ACADEMY.service.VirtualPetService - Fetching all pets for user ID: 10
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : p1_0
-2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(S5_T2.IT_ACADEMY.entity.Pet(60206976248800))] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet] 
-2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@4f9bacbb] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user] 
+2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800))] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet]
+2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@4f9bacbb] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user]
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.q.s.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmParameter : org.hibernate.query.sqm.tree.expression.SqmJpaCriteriaParameterWrapper@38bfb9c3
-2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.q.s.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(S5_T2.IT_ACADEMY.entity.Pet(60206976248800).user(60206976372400).id) 
+2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.q.s.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800).user(60206976372400).id)
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
- \-EntityResultImpl [S5_T2.IT_ACADEMY.entity.Pet(60206976248800)]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet(60206976248800).color]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet(60206976248800).energy]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet(60206976248800).mood]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet(60206976248800).name]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet(60206976248800).type]
- |  \-EntityFetchSelectImpl [S5_T2.IT_ACADEMY.entity.Pet(60206976248800).user]
+ \-EntityResultImpl [S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800)]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800).color]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800).energy]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800).mood]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800).name]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800).type]
+ |  \-EntityFetchSelectImpl [S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800).user]
 
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
     SelectStatement {
       FromClause {
-        StandardTableGroup (p1 : S5_T2.IT_ACADEMY.entity.Pet(60206976248800)) {
+        StandardTableGroup (p1 : S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800)) {
           primaryTableReference : pet as p1_0
           TableGroupJoins {
-            left  join LazyTableGroup (u1 : S5_T2.IT_ACADEMY.entity.Pet(60206976248800).user(60206976372400)) {
+            left  join LazyTableGroup (u1 : S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800).user(60206976372400)) {
             }
           }
         }
@@ -5853,21 +5853,21 @@ io.jsonwebtoken.security.SignatureException: JWT signature does not match locall
 
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.results - Initializer list:
-	  S5_T2.IT_ACADEMY.entity.Pet(60206976248800).user -> EntitySelectFetchInitializer(S5_T2.IT_ACADEMY.entity.Pet(60206976248800).user)@1744854751 (ToOneAttributeMapping(NavigableRole[S5_T2.IT_ACADEMY.entity.Pet.user])@1604420692)
-	  S5_T2.IT_ACADEMY.entity.Pet(60206976248800) -> EntityResultInitializer(S5_T2.IT_ACADEMY.entity.Pet(60206976248800))@289196184 (SingleTableEntityPersister(S5_T2.IT_ACADEMY.entity.Pet))
+	  S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800).user -> EntitySelectFetchInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800).user)@1744854751 (ToOneAttributeMapping(NavigableRole[S5_T2.IT_ACADEMY.entity.VirtualPet.user])@1604420692)
+	  S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800) -> EntityResultInitializer(S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800))@289196184 (SingleTableEntityPersister(S5_T2.IT_ACADEMY.entity.VirtualPet))
 
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.color,p1_0.energy,p1_0.mood,p1_0.name,p1_0.type,p1_0.user_id from pet p1_0 where p1_0.user_id=?
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [5]
-2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.Pet(60206976248800)): 5
-2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.Pet(60206976248800)#5] : 479188493
+2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800)): 5
+2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800)#5] : 479188493
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.results - Extracted JDBC value [6] - [10]
-2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.orm.results.loading.entity - (EntitySelectFetchInitializer) Found existing loading entry [S5_T2.IT_ACADEMY.entity.Pet(60206976248800).user#10] - using loading instance
+2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.orm.results.loading.entity - (EntitySelectFetchInitializer) Found existing loading entry [S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800).user#10] - using loading instance
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [White]
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [90]
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [100]
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [Tom]
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Horse]
-2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.Pet(60206976248800)#5
+2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : S5_T2.IT_ACADEMY.entity.VirtualPet(60206976248800)#5
 2024-08-17 13:37:09 [http-nio-8080-exec-9] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@571d9d2f
 2024-08-17 13:37:09 [http-nio-8080-exec-9] INFO  S.I.controller.PetController - Fetched 1 pets for user: testuser6
 2024-08-17 13:37:29 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
@@ -6385,7 +6385,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 	Validation Mode: AUTO
 	Jar files URLs []
 	Managed classes names [
-		S5_T2.IT_ACADEMY.entity.Pet
+		S5_T2.IT_ACADEMY.entity.VirtualPet
 		S5_T2.IT_ACADEMY.entity.Role
 		S5_T2.IT_ACADEMY.entity.User]
 	Mapping files names []
@@ -6638,14 +6638,14 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-22 20:37:19 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
 2024-08-22 20:37:19 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@195ee67a
 2024-08-22 20:37:19 [restartedMain] DEBUG o.h.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
-2024-08-22 20:37:19 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Binding entity from annotated class: S5_T2.IT_ACADEMY.entity.Pet
+2024-08-22 20:37:19 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Binding entity from annotated class: S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-22 20:37:19 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
 2024-08-22 20:37:19 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Import with entity name Pet
 2024-08-22 20:37:19 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1940879790, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-22 20:37:19 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1491746776, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-22 20:37:19 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
 2024-08-22 20:37:19 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79711935
-2024-08-22 20:37:19 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Bind entity S5_T2.IT_ACADEMY.entity.Pet on table pet
+2024-08-22 20:37:19 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Bind entity S5_T2.IT_ACADEMY.entity.VirtualPet on table pet
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedDiscriminatorColumn(column='DTYPE')
 2024-08-22 20:37:20 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
 2024-08-22 20:37:20 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1940879790, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
@@ -6653,41 +6653,41 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-22 20:37:20 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
 2024-08-22 20:37:20 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9851338
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Pet] is safe
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Pet
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.VirtualPet] is safe
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property id with lazy=false
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:id]
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:id]
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for id
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.id
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property id
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.boot.model.internal.BinderHelper - #makeIdGenerator(BasicValue([Column(id)]), id, identity, , ...)
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property color with lazy=false
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:color]
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:color]
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for color
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.color
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property color
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property energy with lazy=false
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:energy]
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:energy]
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for energy
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.energy
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property energy
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property mood with lazy=false
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:mood]
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:mood]
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for mood
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.mood
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property mood
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property name with lazy=false
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:name]
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:name]
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for name
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.name
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property name
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property type with lazy=false
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:type]
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:type]
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for type
 2024-08-22 20:37:20 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.type
@@ -7138,12 +7138,12 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.query.plan.cache - Starting QueryInterpretationCache(2048)
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.s.i.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.e.i.EntityCopyObserverFactoryInitiator - Configured EntityCopyObserver strategy: disallow
-2024-08-22 20:37:20 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
-2024-08-22 20:37:20 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Pet] is safe
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Pet
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.Pet]: private accessor [color]
-2024-08-22 20:37:20 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-22 20:37:20 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-22 20:37:20 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.VirtualPet] is safe
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.VirtualPet
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.VirtualPet]: private accessor [color]
+2024-08-22 20:37:20 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Role] is safe
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Role
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.Role]: private accessor [name]
@@ -7152,43 +7152,43 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.User]: private accessor [password]
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.jdbc.mutation - Skipping collection row updates - S5_T2.IT_ACADEMY.entity.User.roles
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting post-init callbacks
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : To-one key - NavigableRole[S5_T2.IT_ACADEMY.entity.Pet.user]
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.Pet) `staticFetchableList` generator
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : To-one key - NavigableRole[S5_T2.IT_ACADEMY.entity.VirtualPet.user]
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.VirtualPet) `staticFetchableList` generator
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.Role) `staticFetchableList` generator
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[S5_T2.IT_ACADEMY.entity.User.roles#{element}]) - element descriptor
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping(S5_T2.IT_ACADEMY.entity.User.roles)#finishInitialization
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping(S5_T2.IT_ACADEMY.entity.User.roles) - key descriptor
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.User) `staticFetchableList` generator
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : p1_0
-2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(S5_T2.IT_ACADEMY.entity.Pet)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet] 
-2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@3a321ebf] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user] 
+2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(S5_T2.IT_ACADEMY.entity.VirtualPet)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet]
+2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@3a321ebf] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user]
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : u1_0
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : r1_0
-2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [CollectionTableGroup(S5_T2.IT_ACADEMY.entity.Pet.user.roles)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user.roles] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user.roles] 
-2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@2a392227] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}] 
+2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [CollectionTableGroup(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles]
+2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@2a392227] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}]
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : r1_1
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
- \-EntityResultImpl [S5_T2.IT_ACADEMY.entity.Pet]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.color]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.energy]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.mood]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.name]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.type]
- |  \-EntityFetchJoinedImpl [S5_T2.IT_ACADEMY.entity.Pet.user]
+ \-EntityResultImpl [S5_T2.IT_ACADEMY.entity.VirtualPet]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.color]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.energy]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.mood]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.name]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.type]
+ |  \-EntityFetchJoinedImpl [S5_T2.IT_ACADEMY.entity.VirtualPet.user]
 
 2024-08-22 20:37:20 [restartedMain] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
     SelectStatement {
       FromClause {
-        StandardTableGroup (p1 : S5_T2.IT_ACADEMY.entity.Pet) {
+        StandardTableGroup (p1 : S5_T2.IT_ACADEMY.entity.VirtualPet) {
           primaryTableReference : pet as p1_0
           TableGroupJoins {
-            left  join LazyTableGroup (u1 : S5_T2.IT_ACADEMY.entity.Pet.user) {
+            left  join LazyTableGroup (u1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user) {
               primaryTableReference : users as u1_0
               TableGroupJoins {
-                left  join CollectionTableGroup (r1 : S5_T2.IT_ACADEMY.entity.Pet.user.roles) {
+                left  join CollectionTableGroup (r1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles) {
                   primaryTableReference : user_roles as r1_0
                   TableGroupJoins {
-                    left  join LazyTableGroup (r1 : S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}) {
+                    left  join LazyTableGroup (r1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}) {
                       primaryTableReference : role as r1_1
                     }
                   }
@@ -7200,7 +7200,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
       }
     }
 
-2024-08-22 20:37:20 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: S5_T2.IT_ACADEMY.entity.Pet
+2024-08-22 20:37:20 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select id from pet where id=?
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Insert (0): insert into pet (color,energy,mood,name,type,user_id) values (?,?,?,?,?,?)
 2024-08-22 20:37:20 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Update (0): update pet set color=?,energy=?,mood=?,name=?,type=?,user_id=? where id=?
@@ -9616,7 +9616,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 	Validation Mode: AUTO
 	Jar files URLs []
 	Managed classes names [
-		S5_T2.IT_ACADEMY.entity.Pet
+		S5_T2.IT_ACADEMY.entity.VirtualPet
 		S5_T2.IT_ACADEMY.entity.Role
 		S5_T2.IT_ACADEMY.entity.User]
 	Mapping files names []
@@ -9879,21 +9879,21 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-22 21:16:33 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
 2024-08-22 21:16:33 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@793336f6
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Binding entity from annotated class: S5_T2.IT_ACADEMY.entity.Pet
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Binding entity from annotated class: S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Import with entity name Pet
 2024-08-22 21:16:33 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
 2024-08-22 21:16:33 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1940879790, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-22 21:16:33 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1491746776, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Bind entity S5_T2.IT_ACADEMY.entity.Pet on table pet
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.boot.model.internal.EntityBinder - Bind entity S5_T2.IT_ACADEMY.entity.VirtualPet on table pet
 2024-08-22 21:16:33 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
 2024-08-22 21:16:33 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7912606e
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedDiscriminatorColumn(column='DTYPE')
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Pet] is safe
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Pet
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.VirtualPet] is safe
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property id with lazy=false
 2024-08-22 21:16:33 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:id]
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:id]
 2024-08-22 21:16:33 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1940879790, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-22 21:16:33 [HikariPool-1 connection adder] DEBUG jdk.event.security - X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.37_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1491746776, Valid from:02/06/2024, 11:04, Valid until:31/05/2034, 11:04
 2024-08-22 21:16:33 [HikariPool-1 connection adder] DEBUG jdk.event.security -  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 1940879790
@@ -9904,31 +9904,31 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.boot.model.internal.BinderHelper - #makeIdGenerator(BasicValue([Column(id)]), id, identity, , ...)
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property color with lazy=false
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:color]
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:color]
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for color
 2024-08-22 21:16:33 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.color
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property color
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property energy with lazy=false
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:energy]
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:energy]
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for energy
 2024-08-22 21:16:33 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.energy
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property energy
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property mood with lazy=false
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:mood]
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:mood]
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for mood
 2024-08-22 21:16:33 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.mood
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property mood
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property name with lazy=false
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:name]
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:name]
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for name
 2024-08-22 21:16:33 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.name
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property name
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.AnnotatedColumn - Binding column: AnnotatedColumn()
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - MetadataSourceProcessor property type with lazy=false
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.Pet:type]
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.i.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [S5_T2.IT_ACADEMY.entity.VirtualPet:type]
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.m.internal.BasicValueBinder - building BasicValue for type
 2024-08-22 21:16:33 [restartedMain] DEBUG org.hibernate.mapping.BasicValue - Skipping column re-registration: pet.type
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.model.internal.PropertyBinder - Building property type
@@ -10370,12 +10370,12 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-22 21:16:33 [restartedMain] DEBUG org.hibernate.orm.query.plan.cache - Starting QueryInterpretationCache(2048)
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.s.i.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
 2024-08-22 21:16:33 [restartedMain] DEBUG o.h.e.i.EntityCopyObserverFactoryInitiator - Configured EntityCopyObserver strategy: disallow
-2024-08-22 21:16:33 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
-2024-08-22 21:16:33 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Pet] is safe
-2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Pet
-2024-08-22 21:16:34 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.Pet]: private accessor [color]
-2024-08-22 21:16:34 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.Pet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-22 21:16:33 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-22 21:16:33 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.VirtualPet] is safe
+2024-08-22 21:16:33 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.VirtualPet
+2024-08-22 21:16:34 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.VirtualPet]: private accessor [color]
+2024-08-22 21:16:34 [restartedMain] DEBUG o.hibernate.ormbytecode.interceptor - To-one property `S5_T2.IT_ACADEMY.entity.VirtualPet#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [S5_T2.IT_ACADEMY.entity.Role] is safe
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : S5_T2.IT_ACADEMY.entity.Role
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.Role]: private accessor [name]
@@ -10384,43 +10384,43 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.b.i.b.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [S5_T2.IT_ACADEMY.entity.User]: private accessor [password]
 2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.jdbc.mutation - Skipping collection row updates - S5_T2.IT_ACADEMY.entity.User.roles
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting post-init callbacks
-2024-08-22 21:16:34 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : To-one key - NavigableRole[S5_T2.IT_ACADEMY.entity.Pet.user]
-2024-08-22 21:16:34 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.Pet) `staticFetchableList` generator
+2024-08-22 21:16:34 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : To-one key - NavigableRole[S5_T2.IT_ACADEMY.entity.VirtualPet.user]
+2024-08-22 21:16:34 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.VirtualPet) `staticFetchableList` generator
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.Role) `staticFetchableList` generator
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[S5_T2.IT_ACADEMY.entity.User.roles#{element}]) - element descriptor
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping(S5_T2.IT_ACADEMY.entity.User.roles)#finishInitialization
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : PluralAttributeMapping(S5_T2.IT_ACADEMY.entity.User.roles) - key descriptor
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.orm.model.mapping.creation - Starting PostInitCallbackEntry : Entity(S5_T2.IT_ACADEMY.entity.User) `staticFetchableList` generator
 2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : p1_0
-2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(S5_T2.IT_ACADEMY.entity.Pet)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet] 
-2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@2440fe06] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user] 
+2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(S5_T2.IT_ACADEMY.entity.VirtualPet)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet]
+2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@2440fe06] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user]
 2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : u1_0
 2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : r1_0
-2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [CollectionTableGroup(S5_T2.IT_ACADEMY.entity.Pet.user.roles)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user.roles] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user.roles] 
-2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@68274170] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}] for NavigablePath [S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}] 
+2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [CollectionTableGroup(S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles)] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles]
+2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@68274170] with identifierForTableGroup [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}] for NavigablePath [S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}]
 2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : r1_1
 2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
- \-EntityResultImpl [S5_T2.IT_ACADEMY.entity.Pet]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.color]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.energy]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.mood]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.name]
- |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.Pet.type]
- |  \-EntityFetchJoinedImpl [S5_T2.IT_ACADEMY.entity.Pet.user]
+ \-EntityResultImpl [S5_T2.IT_ACADEMY.entity.VirtualPet]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.color]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.energy]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.mood]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.name]
+ |  +-BasicFetch [S5_T2.IT_ACADEMY.entity.VirtualPet.type]
+ |  \-EntityFetchJoinedImpl [S5_T2.IT_ACADEMY.entity.VirtualPet.user]
 
 2024-08-22 21:16:34 [restartedMain] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
     SelectStatement {
       FromClause {
-        StandardTableGroup (p1 : S5_T2.IT_ACADEMY.entity.Pet) {
+        StandardTableGroup (p1 : S5_T2.IT_ACADEMY.entity.VirtualPet) {
           primaryTableReference : pet as p1_0
           TableGroupJoins {
-            left  join LazyTableGroup (u1 : S5_T2.IT_ACADEMY.entity.Pet.user) {
+            left  join LazyTableGroup (u1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user) {
               primaryTableReference : users as u1_0
               TableGroupJoins {
-                left  join CollectionTableGroup (r1 : S5_T2.IT_ACADEMY.entity.Pet.user.roles) {
+                left  join CollectionTableGroup (r1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles) {
                   primaryTableReference : user_roles as r1_0
                   TableGroupJoins {
-                    left  join LazyTableGroup (r1 : S5_T2.IT_ACADEMY.entity.Pet.user.roles.{element}) {
+                    left  join LazyTableGroup (r1 : S5_T2.IT_ACADEMY.entity.VirtualPet.user.roles.{element}) {
                       primaryTableReference : role as r1_1
                     }
                   }
@@ -10432,7 +10432,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
       }
     }
 
-2024-08-22 21:16:34 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: S5_T2.IT_ACADEMY.entity.Pet
+2024-08-22 21:16:34 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: S5_T2.IT_ACADEMY.entity.VirtualPet
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select id from pet where id=?
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Insert (0): insert into pet (color,energy,mood,name,type,user_id) values (?,?,?,?,?,?)
 2024-08-22 21:16:34 [restartedMain] DEBUG o.h.p.entity.AbstractEntityPersister -  Update (0): update pet set color=?,energy=?,mood=?,name=?,type=?,user_id=? where id=?

@@ -5,44 +5,45 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-public class Pet {
+public class VirtualPet {
     @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private String name;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private String type;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private String color;
-
-    // New attributes
-    @Getter @Setter
-    private int mood;
-
-    @Getter @Setter
-    private int energy;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+    @Getter
+    @Setter
+    private int mood;
+    @Getter
+    @Setter
+    private int energy;
 
-    public void setUser(User user) {
-        this.user = user;
+    public VirtualPet() {
+        this.mood = 100; // Max mood
+        this.energy = 100; // Max energy
     }
 
     public User getUser() {
         return user;
     }
 
-    // You can add logic to initialize mood and energy, e.g., setting default values
-    public Pet() {
-        this.mood = 100; // Max mood
-        this.energy = 100; // Max energy
+    public void setUser(User user) {
+        this.user = user;
     }
 
     // Methods to perform actions

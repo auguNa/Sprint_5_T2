@@ -1,5 +1,6 @@
-package S5_T2.IT_ACADEMY.entity;
+package S5_T2.IT_ACADEMY.service;
 
+import S5_T2.IT_ACADEMY.entity.User;
 import S5_T2.IT_ACADEMY.repository.UserRepository;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
