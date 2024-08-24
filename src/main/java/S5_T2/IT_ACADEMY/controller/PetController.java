@@ -6,6 +6,8 @@ import S5_T2.IT_ACADEMY.repository.UserRepository;
 import S5_T2.IT_ACADEMY.service.VirtualPetService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/pets")
 public class PetController {
-
+    private static final Logger logger = LoggerFactory.getLogger(PetController.class);
     @Autowired
     private VirtualPetService petService;
 
@@ -39,6 +41,25 @@ public class PetController {
 
         List<VirtualPet> pets = petService.getAllPets(user.getId());
         log.info("Fetched {} pets for user: {}", pets.size(), username);
+        return pets;
+    }
+    @PreAuthorize("hasRole('ROLE_USER')")
+    @GetMapping
+    public List<VirtualPet> getAllPetsUser(Authentication authentication) {
+        // Get the username from the authentication object
+        String username = authentication.getName();
+        logger.info("Fetching pets for user: {}", username);
+
+        // Fetch the user by username
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> {
+                    logger.error("User not found for username: {}", username);
+                    return new RuntimeException("User not found");
+                });
+        logger.debug("User found: {}", user);
+        // Fetch and return all pets for the user
+        List<VirtualPet> pets = petService.getAllPets(user.getId());
+        logger.info("Fetched {} pets for user: {}", pets.size(), username);
         return pets;
     }
 
@@ -68,6 +89,7 @@ public class PetController {
         return petService.getPetById(id);
     }
 
+    @PreAuthorize("hasRole('ROLE_USER') and @securityService.hasAccessToPet(authentication, #id)")
     @PutMapping("/{id}")
     public VirtualPet updatePet(@PathVariable Long id, @RequestBody VirtualPet pet) {
         log.info("Updating pet with ID: {}", id);
@@ -76,6 +98,7 @@ public class PetController {
         return updatedPet;
     }
 
+    @PreAuthorize("hasRole('ROLE_USER') and @securityService.hasAccessToPet(authentication, #id)")
     @PostMapping("/{id}/feed")
     public VirtualPet feedPet(@PathVariable Long id) {
         log.info("Feeding pet with ID: {}", id);
@@ -84,6 +107,7 @@ public class PetController {
         return pet;
     }
 
+    @PreAuthorize("hasRole('ROLE_USER') and @securityService.hasAccessToPet(authentication, #id)")
     @PostMapping("/{id}/play")
     public VirtualPet playWithPet(@PathVariable Long id) {
         log.info("Playing with pet with ID: {}", id);
@@ -92,6 +116,7 @@ public class PetController {
         return pet;
     }
 
+    @PreAuthorize("hasRole('ROLE_USER') and @securityService.hasAccessToPet(authentication, #id)")
     @PostMapping("/{id}/rest")
     public VirtualPet restPet(@PathVariable Long id) {
         log.info("Resting pet with ID: {}", id);
@@ -100,6 +125,7 @@ public class PetController {
         return pet;
     }
 
+    @PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN') and @securityService.hasAccessToPet(authentication, #id)")
     @DeleteMapping("/{id}")
     public void deletePet(@PathVariable Long id) {
         log.warn("Deleting pet with ID: {}", id);

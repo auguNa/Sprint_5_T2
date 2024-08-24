@@ -40,7 +40,8 @@ public class VirtualPetService {
         pet.setName(petDetails.getName());
         pet.setType(petDetails.getType());
         pet.setColor(petDetails.getColor());
-
+        pet.setMood(petDetails.getMood());
+        pet.setEnergy(petDetails.getEnergy());
         return petRepository.save(pet);
     }
 
