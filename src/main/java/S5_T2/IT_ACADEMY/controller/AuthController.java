@@ -21,7 +21,7 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody AuthRequest authRequest) {
         try {
-            authService.registerUser(authRequest.getUsername(), authRequest.getPassword());
+            authService.registerUser(authRequest.getUsername(), authRequest.getPassword(), authRequest.getRoles());
             return ResponseEntity.status(HttpStatus.CREATED).body("User registered successfully");
         } catch (Exception e) {
             log.error("Error during registration: ", e);
