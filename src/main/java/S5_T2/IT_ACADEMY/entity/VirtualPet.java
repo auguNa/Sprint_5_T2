@@ -44,7 +44,8 @@ public class VirtualPet {
 
     // Methods to perform actions
     public void feed() {
-        this.energy = Math.min(100, this.energy + 10);
+        this.energy = Math.min(100, this.energy + 5);
+        this.mood = Math.min(100, this.mood + 5);
     }
 
     public void play() {
@@ -53,7 +54,7 @@ public class VirtualPet {
     }
 
     public void rest() {
-        this.energy = Math.min(100, this.energy + 20);
+        this.energy = Math.min(100, this.energy + 5);
         this.mood = Math.max(0, this.mood - 5); // Resting may slightly reduce mood
     }
 }

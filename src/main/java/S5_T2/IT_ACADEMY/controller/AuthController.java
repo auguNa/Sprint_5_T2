@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
+@CrossOrigin("http://localhost:3000")
 @RequestMapping("/api/auth")
 public class AuthController {
 

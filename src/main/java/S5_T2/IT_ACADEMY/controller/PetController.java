@@ -18,6 +18,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
+@CrossOrigin("http://localhost:3000")
 @RequestMapping("/api/pets")
 public class PetController {
     private static final Logger logger = LoggerFactory.getLogger(PetController.class);
