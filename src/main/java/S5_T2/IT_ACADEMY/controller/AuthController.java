@@ -1,13 +1,19 @@
 package S5_T2.IT_ACADEMY.controller;
 
 import S5_T2.IT_ACADEMY.dto.AuthRequest;
+import S5_T2.IT_ACADEMY.entity.UserEntity;
 import S5_T2.IT_ACADEMY.service.AuthService;
+import S5_T2.IT_ACADEMY.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -37,6 +43,20 @@ public class AuthController {
         } catch (Exception e) {
             log.error("Error during login: ", e);
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login failed: " + e.getMessage());
+        }
+    }
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/me")
+    public ResponseEntity<UserEntity> getAuthenticatedUser(Authentication authentication) {
+        try {
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            UserEntity userEntity = userService.findByUsername(userDetails.getUsername());
+            return ResponseEntity.ok(userEntity);
+        } catch (Exception e) {
+            log.error("Error fetching authenticated user details: ", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 }

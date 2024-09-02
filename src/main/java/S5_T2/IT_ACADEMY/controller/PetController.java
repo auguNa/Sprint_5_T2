@@ -1,15 +1,16 @@
 package S5_T2.IT_ACADEMY.controller;
 
 import S5_T2.IT_ACADEMY.entity.VirtualPet;
-import S5_T2.IT_ACADEMY.entity.User;
+import S5_T2.IT_ACADEMY.entity.UserEntity;
 import S5_T2.IT_ACADEMY.repository.UserRepository;
-import S5_T2.IT_ACADEMY.service.VirtualPetService;
+import S5_T2.IT_ACADEMY.service.PetService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.security.core.Authentication;
@@ -23,46 +24,43 @@ import java.util.List;
 public class PetController {
     private static final Logger logger = LoggerFactory.getLogger(PetController.class);
     @Autowired
-    private VirtualPetService petService;
+    private PetService petService;
 
     @Autowired
     private UserRepository userRepository;
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/admin/pets")
-    public List<VirtualPet> getAllPets(Authentication authentication) {
-        String username = authentication.getName();
-        log.info("Fetching pets for user: {}", username);
+    public List<VirtualPet> getAllPetsForAdmin(Authentication authentication) {
+        // Get UserDetails from Authentication
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        String username = userDetails.getUsername();
 
-        User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> {
-                    log.error("User not found for username: {}", username);
-                    return new RuntimeException("User not found");
-                });
+        log.info("Fetching all pets for admin: {}", username);
 
-        List<VirtualPet> pets = petService.getAllPets(user.getId());
-        log.info("Fetched {} pets for user: {}", pets.size(), username);
+        // Find the UserEntity using the username
+        UserEntity userEntity = userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        // Fetch all pets
+        List<VirtualPet> pets = petService.getAllPets(userEntity);
+        log.info("Fetched {} pets for admin", pets.size());
         return pets;
     }
+
     @PreAuthorize("hasRole('ROLE_USER')")
     @GetMapping
-    public List<VirtualPet> getAllPetsUser(Authentication authentication) {
-        // Get the username from the authentication object
-        String username = authentication.getName();
-        logger.info("Fetching pets for user: {}", username);
+    public List<VirtualPet> getAllPetsForUser(Authentication authentication) {
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        String username = userDetails.getUsername();
 
-        // Fetch the user by username
-        User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> {
-                    logger.error("User not found for username: {}", username);
-                    return new RuntimeException("User not found");
-                });
-        logger.debug("User found: {}", user);
-        // Fetch and return all pets for the user
-        List<VirtualPet> pets = petService.getAllPets(user.getId());
-        logger.info("Fetched {} pets for user: {}", pets.size(), username);
+        UserEntity userEntity = userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        List<VirtualPet> pets = petService.getAllPets(userEntity);
         return pets;
     }
+
 
     @PreAuthorize("hasRole('ROLE_USER')")
     @PostMapping("/create")
@@ -72,14 +70,14 @@ public class PetController {
         String username = authentication.getName();
         log.info("Creating pet for user: {}", username);
 
-        User user = userRepository.findByUsername(username)
+        UserEntity userEntity = userRepository.findByUsername(username)
                 .orElseThrow(() -> {
                     log.error("User not found for username: {}", username);
                     return new RuntimeException("User not found");
                 });
 
-        pet.setUser(user);
-        VirtualPet createdPet = petService.createPet(pet, user);
+        pet.setUserEntity(userEntity);
+        VirtualPet createdPet = petService.createPet(pet, userEntity);
         log.info("Pet created with ID: {} for user: {}", createdPet.getId(), username);
         return createdPet;
     }

@@ -1,11 +1,13 @@
 package S5_T2.IT_ACADEMY.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
 @Entity
 public class VirtualPet {
 
@@ -15,7 +17,6 @@ public class VirtualPet {
 
     @NotBlank(message = "Name is mandatory")
     @Size(max = 50, message = "Name cannot exceed 50 characters")
-
     private String name;
 
     @NotBlank(message = "Type is mandatory")
@@ -28,7 +29,8 @@ public class VirtualPet {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    @JsonIgnore
+    private UserEntity userEntity;
 
     @Min(value = 0, message = "Mood cannot be less than 0")
     @Max(value = 100, message = "Mood cannot exceed 100")
@@ -37,10 +39,6 @@ public class VirtualPet {
     @Min(value = 0, message = "Energy cannot be less than 0")
     @Max(value = 100, message = "Energy cannot exceed 100")
     private int energy = 100;
-
-    public VirtualPet() {
-
-    }
 
     // Methods to perform actions
     public void feed() {

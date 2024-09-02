@@ -1,7 +1,7 @@
 package S5_T2.IT_ACADEMY.service;
 
 import S5_T2.IT_ACADEMY.entity.Role;
-import S5_T2.IT_ACADEMY.entity.User;
+import S5_T2.IT_ACADEMY.entity.UserEntity;
 import S5_T2.IT_ACADEMY.repository.*;
 import S5_T2.IT_ACADEMY.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,11 +44,11 @@ public class AuthService {
                 .collect(Collectors.toSet());
 
         // Create a new user and assign the fetched role
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(passwordEncoder.encode(password));
-        user.setRoles(roles);
-        userRepository.save(user);
+        UserEntity userEntity = new UserEntity();
+        userEntity.setUsername(username);
+        userEntity.setPassword(passwordEncoder.encode(password));
+        userEntity.setRoles(roles);
+        userRepository.save(userEntity);
     }
 
     public void registerAdmin(String username, String password, Set<String> roleNames) {
@@ -57,12 +57,12 @@ public class AuthService {
                 .orElseThrow(() -> new RuntimeException("Error: Role not found."));
 
         // Create a new admin user and assign the fetched role
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(passwordEncoder.encode(password));
-        user.setRoles(Collections.singleton(adminRole));
+        UserEntity userEntity = new UserEntity();
+        userEntity.setUsername(username);
+        userEntity.setPassword(passwordEncoder.encode(password));
+        userEntity.setRoles(Collections.singleton(adminRole));
 
-        userRepository.save(user);
+        userRepository.save(userEntity);
     }
 
     public String loginUser(String username, String password) {
@@ -71,11 +71,11 @@ public class AuthService {
         );
         SecurityContextHolder.getContext().setAuthentication(authentication);
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-        User user = userRepository.findByUsername(username)
+        UserEntity userEntity = userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
         // Fetch user roles and add them to the JWT token
-        List<String> roles = user.getRoles().stream()
+        List<String> roles = userEntity.getRoles().stream()
                 .map(role -> role.getName())  // Assuming Role has a getName() method
                 .collect(Collectors.toList());
 
