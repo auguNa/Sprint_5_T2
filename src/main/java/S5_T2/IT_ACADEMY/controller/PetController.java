@@ -29,24 +29,6 @@ public class PetController {
     @Autowired
     private UserRepository userRepository;
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    @GetMapping("/admin/pets")
-    public List<VirtualPet> getAllPetsForAdmin(Authentication authentication) {
-        // Get UserDetails from Authentication
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        String username = userDetails.getUsername();
-
-        log.info("Fetching all pets for admin: {}", username);
-
-        // Find the UserEntity using the username
-        UserEntity userEntity = userRepository.findByUsername(username)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-
-        // Fetch all pets
-        List<VirtualPet> pets = petService.getAllPets(userEntity);
-        log.info("Fetched {} pets for admin", pets.size());
-        return pets;
-    }
 
     @PreAuthorize("hasRole('ROLE_USER')")
     @GetMapping
