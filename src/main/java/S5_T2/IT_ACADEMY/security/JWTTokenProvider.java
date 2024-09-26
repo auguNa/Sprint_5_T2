@@ -30,8 +30,6 @@ public class JWTTokenProvider {
 
     public Authentication getAuthentication(String token) {
         Claims claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody();
-        // Extract user details and roles from claims, and return an Authentication object
-        // Example: return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
         return null;
     }
 }

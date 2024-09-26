@@ -2,6 +2,7 @@ package S5_T2.IT_ACADEMY.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.Set;

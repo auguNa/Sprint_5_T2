@@ -48,11 +48,15 @@ public class VirtualPet {
 
     public void play() {
         this.mood = Math.min(100, this.mood + 10);
-        this.energy = Math.max(0, this.energy - 10); // Playing reduces energy
+        this.energy = Math.max(0, this.energy - 10);
     }
 
     public void rest() {
         this.energy = Math.min(100, this.energy + 5);
-        this.mood = Math.max(0, this.mood - 5); // Resting may slightly reduce mood
+        this.mood = Math.max(0, this.mood - 5);
+    }
+
+    public String getOwnerName() {
+        return userEntity != null ? userEntity.getUsername() : "Unknown";
     }
 }

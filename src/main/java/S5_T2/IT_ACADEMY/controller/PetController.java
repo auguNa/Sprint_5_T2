@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-
 import org.springframework.security.core.Authentication;
 
 import java.util.List;
@@ -23,9 +22,9 @@ import java.util.List;
 @RequestMapping("/api/pets")
 public class PetController {
     private static final Logger logger = LoggerFactory.getLogger(PetController.class);
+
     @Autowired
     private PetService petService;
-
     @Autowired
     private UserRepository userRepository;
 

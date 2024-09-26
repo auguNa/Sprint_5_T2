@@ -19,16 +19,10 @@ public class RegisterTest {
 
     @BeforeMethod
     public void setUp() {
-        // Set the path to the local ChromeDriver
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\augus\\Desktop\\BCN ACTIVA\\ITAcademy\\SPRINT_5_T2\\src\\main\\resources\\drivers\\chromedriver-win64\\chromedriver.exe");
-
-        // Initialize the ChromeDriver
+        System.setProperty("webdriver.chrome.driver",
+                "src/main/resources/drivers/chromedriver-win64/chromedriver.exe"  );
         driver = new ChromeDriver();
-
-        // Maximize the browser window
         driver.manage().window().maximize();
-
-        // Navigate to the registration page
         driver.get("http://localhost:3000/register");
     }
 

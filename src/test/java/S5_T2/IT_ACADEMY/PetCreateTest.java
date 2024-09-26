@@ -20,7 +20,8 @@ public class PetCreateTest {
     @BeforeMethod
     public void setUp() {
         // Set up the WebDriver using the locally stored ChromeDriver
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\augus\\Desktop\\BCN ACTIVA\\ITAcademy\\SPRINT_5_T2\\src\\main\\resources\\drivers\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",
+                "src/main/resources/drivers/chromedriver-win64/chromedriver.exe");
         driver = new ChromeDriver();
 
         // Navigate to the login page
@@ -74,9 +75,9 @@ public class PetCreateTest {
        // Assert.assertTrue(successMessage.isDisplayed(), "Pet creation failed.");
     }
 
-    @AfterMethod
-    public void tearDown() {
-        // Close the browser
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown() {
+//        // Close the browser
+//        driver.quit();
+//    }
 }

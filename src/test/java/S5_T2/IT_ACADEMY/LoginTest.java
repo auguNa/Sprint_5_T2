@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -19,10 +20,9 @@ public class LoginTest {
     @BeforeMethod
     public void setUp() {
         // Set up the WebDriver using the locally stored ChromeDriver
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\augus\\Desktop\\BCN ACTIVA\\ITAcademy\\SPRINT_5_T2\\src\\main\\resources\\drivers\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",
+                "src/main/resources/drivers/chromedriver-win64/chromedriver.exe");
         driver = new ChromeDriver();
-
-        // Navigate to the login page
         driver.get("http://localhost:3000/login");
     }
 

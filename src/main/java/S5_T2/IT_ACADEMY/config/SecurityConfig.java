@@ -45,12 +45,12 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/register", "/api/auth/login").permitAll()
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/auth/me").authenticated() // Securing the /me endpoint
+                        .requestMatchers("/api/auth/me").authenticated()
+                        .requestMatchers("/set", "/get").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(new JwtRequestFilter(jwtUtil, userDetailsService), UsernamePasswordAuthenticationFilter.class);
-
         return http.build();
     }
 }

@@ -2,6 +2,7 @@ package S5_T2.IT_ACADEMY.controller;
 
 import S5_T2.IT_ACADEMY.dto.AuthRequest;
 import S5_T2.IT_ACADEMY.entity.UserEntity;
+import S5_T2.IT_ACADEMY.exception.UserAlreadyExistsException;
 import S5_T2.IT_ACADEMY.service.AuthService;
 import S5_T2.IT_ACADEMY.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -10,10 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-
-
 import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -23,15 +21,24 @@ public class AuthController {
 
     @Autowired
     private AuthService authService;
+    @Autowired
+    private UserService userService;
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody AuthRequest authRequest) {
         try {
+            // Call the service to register the user
             authService.registerUser(authRequest.getUsername(), authRequest.getPassword(), authRequest.getRoles());
+            // Return a successful response if the registration succeeds
             return ResponseEntity.status(HttpStatus.CREATED).body("User registered successfully");
+        } catch (UserAlreadyExistsException e) {
+            // Specific handling for user already existing
+            log.error("Registration failed: User already exists", e);
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
         } catch (Exception e) {
+            // Generic error handling for other unexpected exceptions
             log.error("Error during registration: ", e);
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Registration failed: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred during registration");
         }
     }
 
@@ -45,8 +52,6 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login failed: " + e.getMessage());
         }
     }
-    @Autowired
-    private UserService userService;
 
     @GetMapping("/me")
     public ResponseEntity<UserEntity> getAuthenticatedUser(Authentication authentication) {

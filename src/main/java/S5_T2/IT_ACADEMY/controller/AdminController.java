@@ -39,13 +39,6 @@ public class AdminController {
         }
     }
 
-    @GetMapping("/users")
-    public ResponseEntity<List<UserEntity>> getAllUsers(Authentication authentication) {
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        List<UserEntity> userEntities = userService.getAllUsers(userDetails.getUsername());
-        return ResponseEntity.ok(userEntities);
-    }
-
     @PostMapping("/users")
     public ResponseEntity<String> createUser(@RequestBody UserEntity userEntity) {
         try {
@@ -75,6 +68,13 @@ public class AdminController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User deletion failed: " + e.getMessage());
         }
     }
+    @GetMapping("/users")
+    public ResponseEntity<List<UserEntity>> getAllUsers(Authentication authentication) {
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        List<UserEntity> userEntities = userService.getAllUsers(userDetails.getUsername());
+        return ResponseEntity.ok(userEntities);
+    }
+
     @Autowired
     private PetService petService;
     @Autowired
@@ -87,7 +87,6 @@ public class AdminController {
         String username = userDetails.getUsername();
 
         log.info("Fetching all pets for admin: {}", username);
-
         // Find the UserEntity using the username
         UserEntity userEntity = userRepository.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User not found"));
@@ -96,5 +95,30 @@ public class AdminController {
         List<VirtualPet> pets = petService.getAllPets(userEntity);
         log.info("Fetched {} pets for admin", pets.size());
         return pets;
+
+    }
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @DeleteMapping("/pets/{petId}")
+    public ResponseEntity<String> deletePet(@PathVariable Long petId) {
+        try {
+            petService.deletePet(petId);
+            log.info("Pet with ID {} deleted successfully", petId);
+            return ResponseEntity.ok("Pet deleted successfully!");
+        } catch (Exception e) {
+            log.error("Error deleting pet with ID {}: {}", petId, e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Pet deletion failed: " + e.getMessage());
+        }
+    }
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PutMapping("/pets/{petId}")
+    public ResponseEntity<String> updatePetAdmin(@PathVariable Long petId, @RequestBody VirtualPet virtualPet) {
+        try {
+            petService.updatePet(petId, virtualPet);  // Ensure you have an updatePet method in your PetService
+            log.info("Pet with ID {} updated successfully", petId);
+            return ResponseEntity.ok("Pet updated successfully!");
+        } catch (Exception e) {
+            log.error("Error updating pet with ID {}: {}", petId, e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Pet update failed: " + e.getMessage());
+        }
     }
 }
