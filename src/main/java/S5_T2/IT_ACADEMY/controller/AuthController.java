@@ -27,16 +27,12 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody AuthRequest authRequest) {
         try {
-            // Call the service to register the user
             authService.registerUser(authRequest.getUsername(), authRequest.getPassword(), authRequest.getRoles());
-            // Return a successful response if the registration succeeds
             return ResponseEntity.status(HttpStatus.CREATED).body("User registered successfully");
         } catch (UserAlreadyExistsException e) {
-            // Specific handling for user already existing
             log.error("Registration failed: User already exists", e);
             return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
         } catch (Exception e) {
-            // Generic error handling for other unexpected exceptions
             log.error("Error during registration: ", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred during registration");
         }

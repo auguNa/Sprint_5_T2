@@ -19,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 
 @Slf4j
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/admin")
 public class AdminController {
@@ -28,6 +29,10 @@ public class AdminController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private PetService petService;
+    @Autowired
+    private UserRepository userRepository;
 
     @PostMapping("/register")
     public ResponseEntity<String> registerAdmin(@RequestBody AuthRequest request) {
@@ -68,6 +73,7 @@ public class AdminController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User deletion failed: " + e.getMessage());
         }
     }
+
     @GetMapping("/users")
     public ResponseEntity<List<UserEntity>> getAllUsers(Authentication authentication) {
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
@@ -75,10 +81,6 @@ public class AdminController {
         return ResponseEntity.ok(userEntities);
     }
 
-    @Autowired
-    private PetService petService;
-    @Autowired
-    private UserRepository userRepository;
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/pets")
     public List<VirtualPet> getAllPetsForAdmin(Authentication authentication) {
@@ -95,8 +97,8 @@ public class AdminController {
         List<VirtualPet> pets = petService.getAllPets(userEntity);
         log.info("Fetched {} pets for admin", pets.size());
         return pets;
-
     }
+
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @DeleteMapping("/pets/{petId}")
     public ResponseEntity<String> deletePet(@PathVariable Long petId) {
@@ -109,6 +111,7 @@ public class AdminController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Pet deletion failed: " + e.getMessage());
         }
     }
+
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PutMapping("/pets/{petId}")
     public ResponseEntity<String> updatePetAdmin(@PathVariable Long petId, @RequestBody VirtualPet virtualPet) {
@@ -121,4 +124,49 @@ public class AdminController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Pet update failed: " + e.getMessage());
         }
     }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PostMapping("pets/{id}/play")
+    public ResponseEntity<?> playWithPetAdmin(@PathVariable Long id) {
+        try {
+            log.info("Playing with pet with ID: {}", id);
+            VirtualPet pet = petService.performAction(id, "play");
+            log.info("Pet played with ID: {}", id);
+            return ResponseEntity.ok(pet);
+        } catch (Exception e) {
+            log.error("Error playing with pet ID {}: {}", id, e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to play with pet: " + e.getMessage());
+        }
+    }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PostMapping("pets/{id}/feed")
+    public VirtualPet feedPet(@PathVariable Long id) {
+        log.info("Feeding pet with ID: {}", id);
+        VirtualPet pet = petService.performAction(id, "feed");
+        log.info("Pet fed with ID: {}", id);
+        return pet;
+    }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PostMapping("pets/{id}/rest")
+    public VirtualPet restPet(@PathVariable Long id) {
+        log.info("Resting pet with ID: {}", id);
+        VirtualPet pet = petService.performAction(id, "rest");
+        log.info("Pet rested with ID: {}", id);
+        return pet;
+    }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @GetMapping("/users/{userId}")
+    public ResponseEntity<UserEntity> getUserById(@PathVariable Long userId) {
+        try {
+            UserEntity userEntity = userService.getUserById(userId);
+            return ResponseEntity.ok(userEntity);
+        } catch (Exception e) {
+            log.error("Error fetching user with ID {}: {}", userId, e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+    }
+
 }

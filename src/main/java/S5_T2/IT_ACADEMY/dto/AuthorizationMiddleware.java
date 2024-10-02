@@ -23,7 +23,7 @@ public class AuthorizationMiddleware extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
 
-        String token = jwtTokenProvider.resolveToken(request); // Ensure resolveToken is defined in JWTTokenProvider
+        String token = jwtTokenProvider.resolveToken(request);
 
         if (token != null && jwtTokenProvider.validateToken(token)) { // Ensure validateToken is defined
             Authentication auth = jwtTokenProvider.getAuthentication(token); // Ensure getAuthentication is defined

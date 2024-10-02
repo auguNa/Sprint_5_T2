@@ -18,4 +18,6 @@ public interface UserService {
     void deleteUser(Long userId);
 
     UserEntity findByUsername(String username);
+
+    UserEntity getUserById(Long userId);
 }

@@ -2,8 +2,9 @@ package S5_T2.IT_ACADEMY.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Cache;
 
 import java.util.Set;
 
@@ -11,6 +12,9 @@ import java.util.Set;
 @Table(name = "users")
 @Data
 @NoArgsConstructor
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +35,6 @@ public class UserEntity {
     @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<VirtualPet> virtualPets;
 
-    // Constructor with ID parameter
     public UserEntity(Long id) {
         this.id = id;
     }
